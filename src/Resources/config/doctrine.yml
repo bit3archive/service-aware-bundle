@@ -1,0 +1,11 @@
+service_aware:
+  services:
+    doctrine.doctrine_bundle.entity_manager:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Doctrine\DoctrineBundle\EntityManagerAwareInterface"
+      method:    "setEntityManager"
+      service:   "doctrine.orm.default_entity_manager"
+
+    doctrine.mongo_odm_bundle.document_manager:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Doctrine\MongoODMBundle\DocumentManagerAwareInterface"
+      method:    "setDocumentManager"
+      service:   "doctrine_mongodb.odm.default_document_manager"

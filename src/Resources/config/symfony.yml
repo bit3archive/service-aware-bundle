@@ -1,0 +1,56 @@
+service_aware:
+  services:
+    symfony.framework_bundle.event_dispatcher:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\EventDispatcher\EventDispatcherAwareInterface"
+      method:    "setEventDispatcher"
+      service:   "event_dispatcher"
+
+    symfony.framework_bundle.form_factory:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Form\FormFactoryAwareInterface"
+      method:    "setFormFactory"
+      service:   "form.factory"
+
+    symfony.framework_bundle.http_kernel:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Kernel\HttpKernelAwareInterface"
+      method:    "setHttpKernel"
+      service:   "http_kernel"
+
+    symfony.framework_bundle.kernel:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Kernel\KernelAwareInterface"
+      method:    "setKernel"
+      service:   "kernel"
+
+    symfony.framework_bundle.request_stack:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Request\RequestStackAwareInterface"
+      method:    "setRequestStack"
+      service:   "request_stack"
+
+    symfony.framework_bundle.router:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Router\RouterAwareInterface"
+      method:    "setRouter"
+      service:   "router"
+
+    symfony.framework_bundle.security_context:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Security\SecurityContextAwareInterface"
+      method:    "setSecurityContext"
+      service:   "security.context"
+
+    symfony.framework_bundle.serializer:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Serializer\SerializerAwareInterface"
+      method:    "setSerializer"
+      service:   "serializer"
+
+    symfony.framework_bundle.templating:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Templating\TemplatingAwareInterface"
+      method:    "setTemplating"
+      service:   "templating"
+
+    symfony.framework_bundle.translator:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Translator\TranslatorAwareInterface"
+      method:    "setTranslator"
+      service:   "translator"
+
+    symfony.framework_bundle.validator:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Validator\ValidatorAwareInterface"
+      method:    "setValidator"
+      service:   "validator"

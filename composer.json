@@ -1,0 +1,54 @@
+{
+    "name": "bit3/assetic-autoprefixer",
+    "description": "autoprefixer-php filter for kriswallsmith/assetic",
+    "keywords": [
+        "assets",
+        "css",
+        "vendor-prefix"
+    ],
+    "homepage": "http://bit3.de",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tristan Lins",
+            "email": "tristan.lins@bit3.de",
+            "homepage": "http://bit3.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "info@bit3.de",
+        "issues": "https://github.com/bit3/assetic-autoprefixer-php/issues",
+        "wiki": "https://github.com/bit3/assetic-autoprefixer-php/wiki",
+        "source": "https://github.com/bit3/assetic-autoprefixer-php"
+    },
+    "require": {
+        "php": ">=5.3",
+        "symfony/dependency-injection": "~2.0",
+        "symfony/finder": "~2.0",
+        "symfony/http-kernel": "~2.0",
+        "symfony/property-access": "~2.0",
+        "symfony/yaml": "~2.0"
+    },
+    "require-dev": {
+        "contao-community-alliance/build-system-all-tasks": "~1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "suggest": {
+        "braincrafted/bootstrap-bundle": "Support the flash message service.",
+        "doctrine/mongodb-odm": "Supports the document manager service."
+    },
+    "autoload": {
+        "psr-4": {
+            "Bit3\\Symfony\\ServiceAwareBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev",
+            "dev-develop": "1.1.x-dev"
+        }
+    }
+}

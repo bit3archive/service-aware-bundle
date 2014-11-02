@@ -1,0 +1,6 @@
+service_aware:
+  services:
+    jsm.serializer_bundle.serializer:
+      interface: "Bit3\Symfony\ServiceAwareBundle\JMS\SerializerBundle\SerializerAwareInterface"
+      method:    "setSerializer"
+      service:   "jms_serializer"
