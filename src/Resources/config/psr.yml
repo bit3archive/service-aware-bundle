@@ -1,0 +1,6 @@
+service_aware:
+  services:
+    psr.logger:
+      interface: "Bit3\Symfony\ServiceAwareBundle\PSR\Logger\LoggerAwareInterface"
+      method:    "setLogger"
+      service:   "logger"

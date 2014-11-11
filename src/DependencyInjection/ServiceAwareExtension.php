@@ -22,7 +22,7 @@ class ServiceAwareExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $parser   = new Yaml();
-        foreach (['braincrafted', 'doctrine', 'jms', 'symfony'] as $file) {
+        foreach (['braincrafted', 'doctrine', 'jms', 'psr', 'symfony'] as $file) {
             $defaults = $parser->parse(file_get_contents(__DIR__ . '/../Resources/config/' . $file . '.yml'));
 
             // append default service configuration

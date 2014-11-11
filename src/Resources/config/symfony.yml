@@ -54,3 +54,8 @@ service_aware:
       interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\Validator\ValidatorAwareInterface"
       method:    "setValidator"
       service:   "validator"
+
+    symfony.monolog_bundle.logger:
+      interface: "Bit3\Symfony\ServiceAwareBundle\Symfony\MonologBundle\Logger\LoggerAwareInterface"
+      method:    "setLogger"
+      service:   "monolog.logger"
