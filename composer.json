@@ -1,10 +1,8 @@
 {
-    "name": "bit3/assetic-autoprefixer",
-    "description": "autoprefixer-php filter for kriswallsmith/assetic",
+    "name": "bit3/service-aware-bundle",
+    "description": "Automated service injection for symfony.",
     "keywords": [
-        "assets",
-        "css",
-        "vendor-prefix"
+        "service"
     ],
     "homepage": "http://bit3.de",
     "type": "library",
@@ -19,9 +17,9 @@
     ],
     "support": {
         "email": "info@bit3.de",
-        "issues": "https://github.com/bit3/assetic-autoprefixer-php/issues",
-        "wiki": "https://github.com/bit3/assetic-autoprefixer-php/wiki",
-        "source": "https://github.com/bit3/assetic-autoprefixer-php"
+        "issues": "https://github.com/bit3/service-aware-bundle/issues",
+        "wiki": "https://github.com/bit3/service-aware-bundle/wiki",
+        "source": "https://github.com/bit3/service-aware-bundle"
     },
     "require": {
         "php": ">=5.3",
