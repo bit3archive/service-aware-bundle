@@ -1,6 +1,6 @@
 service_aware:
   services:
     braincrafted.bootstrap_bundle.flash_message:
-      interface: "Bit3\Symfony\ServiceAwareBundle\Braincrafted\BootstrapBundle\FlashMessageAwareInterface"
+      interface: "Bit3\\Symfony\\ServiceAwareBundle\\Braincrafted\\BootstrapBundle\\FlashMessageAwareInterface"
       method:    "setFlashMssage"
       service:   "braincrafted_bootstrap.flash"
