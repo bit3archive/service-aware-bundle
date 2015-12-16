@@ -23,8 +23,7 @@ class InjectServicesCompilerPass implements CompilerPassInterface
             if (
                 !$definition->getClass()
                 || !class_exists($definition->getClass())
-                || $definition->getFactoryClass()
-                || $definition->getFactoryService()
+                || $definition->getFactory()
             ) {
                 // skip definitions
                 // ...without class

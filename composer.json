@@ -23,11 +23,11 @@
     },
     "require": {
         "php": ">=5.3",
-        "symfony/dependency-injection": "~2.0",
-        "symfony/finder": "~2.0",
-        "symfony/http-kernel": "~2.0",
-        "symfony/property-access": "~2.0",
-        "symfony/yaml": "~2.0"
+        "symfony/dependency-injection": "~2.8|~3.0",
+        "symfony/finder": "~2.8|~3.0",
+        "symfony/http-kernel": "~2.8|~3.0",
+        "symfony/property-access": "~2.8|~3.0",
+        "symfony/yaml": "~2.8|~3.0"
     },
     "require-dev": {
         "contao-community-alliance/build-system-all-tasks": "~1.0"
