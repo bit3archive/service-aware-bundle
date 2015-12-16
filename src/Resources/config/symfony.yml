@@ -30,10 +30,20 @@ service_aware:
       method:    "setRouter"
       service:   "router"
 
+    symfony.framework_bundle.authorization_checker:
+      interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Security\\AuthorizationCheckerAwareInterface"
+      method:    "setAuthorizationChecker"
+      service:   "security.authorization_checker"
+
     symfony.framework_bundle.security_context:
       interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Security\\SecurityContextAwareInterface"
       method:    "setSecurityContext"
       service:   "security.context"
+
+    symfony.framework_bundle.token_storage:
+      interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Security\\TokenStorageAwareInterface"
+      method:    "setTokenStorage"
+      service:   "security.token_storage"
 
     symfony.framework_bundle.serializer:
       interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Serializer\\SerializerAwareInterface"
