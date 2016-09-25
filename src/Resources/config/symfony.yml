@@ -5,6 +5,11 @@ service_aware:
       method:    "setEventDispatcher"
       service:   "event_dispatcher"
 
+    symfony.framework_bundle.flash_bag:
+      interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\FlashBag\\FlashBagAwareInterface"
+      method:    "setFlashBag"
+      compiler:  "Bit3\Symfony\ServiceAwareBundle\Symfony\FrameworkBundle\FlashBag\FlashBagAwareCompiler::compile"
+
     symfony.framework_bundle.form_factory:
       interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Form\\FormFactoryAwareInterface"
       method:    "setFormFactory"
@@ -49,6 +54,11 @@ service_aware:
       interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Serializer\\SerializerAwareInterface"
       method:    "setSerializer"
       service:   "serializer"
+
+    symfony.framework_bundle.session:
+      interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Session\\SessionAwareInterface"
+      method:    "setSession"
+      service:   "session"
 
     symfony.framework_bundle.templating:
       interface: "Bit3\\Symfony\\ServiceAwareBundle\\Symfony\\FrameworkBundle\\Templating\\TemplatingAwareInterface"

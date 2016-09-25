@@ -4,6 +4,7 @@ namespace Bit3\Symfony\ServiceAwareBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Parameter;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
@@ -19,7 +20,7 @@ class InjectServicesCompilerPass implements CompilerPassInterface
         $services    = $container->getParameter('service_aware.services');
         $definitions = $container->getDefinitions();
 
-        foreach ($definitions as $definition) {
+        foreach ($definitions as $id => $definition) {
             if (
                 !$definition->getClass()
                 || !class_exists($definition->getClass())
@@ -36,10 +37,23 @@ class InjectServicesCompilerPass implements CompilerPassInterface
 
             foreach ($services as $service) {
                 if ($class->implementsInterface($service['interface'])) {
-                    $definition->addMethodCall(
-                        $service['method'],
-                        array(new Reference($service['service']))
-                    );
+                    if (!empty($service['service'])) {
+                        $definition->addMethodCall(
+                            $service['method'],
+                            array(new Reference($service['service']))
+                        );
+                    }
+
+                    if (!empty($service['parameter'])) {
+                        $definition->addMethodCall(
+                            $service['method'],
+                            array(new Parameter($service['parameter']))
+                        );
+                    }
+
+                    if (!empty($service['compiler'])) {
+                        call_user_func($service['compiler'], $container, $id, $definition, $service);
+                    }
                 }
             }
         }
